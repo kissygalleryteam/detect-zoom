@@ -1,0 +1,13 @@
+{
+    "name": "detect-zoom",
+    "version": "1.0",
+    "desc": "探测窗口缩放比例",
+    "cover": "",
+    "author": {
+        "name": "yiminghe",
+        "email": "yiminghe@gmail.com",
+        "page": "http://docs.kissyui.com"
+    },
+    "type": "kissy-pie",
+    "type-url": "http://abc.alibaba-inc.com/r/kissy-pie"
+}

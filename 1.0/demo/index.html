@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>detectZoom 测试</title>
+    <script src="http://a.tbcdn.cn/s/kissy/1.3.0/kissy-min.js" charset="utf-8"></script>
+</head>
+<body>
+<h2>detectZoom 测试</h2>
+
+<button id='get'>get</button>
+<script>
+    var S = KISSY;
+    if (S.Config.debug) {
+        var srcPath = "../../../";
+        S.config({
+            packages:[
+                {
+                    name:"gallery",
+                    path:srcPath,
+                    charset:"utf-8",
+                    ignorePackageNameInUri:true
+                }
+            ]
+        });
+    }
+
+    S.use('gallery/detect-zoom/1.0/index', function (S, detectZoom) {
+    		S.all('#get').on('click',function(){
+    			if(detectZoom){
+    				alert(S.JSON.stringify(detectZoom()));
+    			}else {
+    				alert('not supported');
+    			}
+    		});
+    })
+</script>
+</body>
+</html>
